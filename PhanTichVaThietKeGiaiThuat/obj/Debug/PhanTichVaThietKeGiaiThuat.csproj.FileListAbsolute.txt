@@ -1,0 +1,7 @@
+C:\Users\trung\source\repos\PhanTichVaThietKeGiaiThuat\PhanTichVaThietKeGiaiThuat\bin\Debug\PhanTichVaThietKeGiaiThuat.exe.config
+C:\Users\trung\source\repos\PhanTichVaThietKeGiaiThuat\PhanTichVaThietKeGiaiThuat\bin\Debug\PhanTichVaThietKeGiaiThuat.exe
+C:\Users\trung\source\repos\PhanTichVaThietKeGiaiThuat\PhanTichVaThietKeGiaiThuat\bin\Debug\PhanTichVaThietKeGiaiThuat.pdb
+C:\Users\trung\source\repos\PhanTichVaThietKeGiaiThuat\PhanTichVaThietKeGiaiThuat\obj\Debug\PhanTichVaThietKeGiaiThuat.csprojAssemblyReference.cache
+C:\Users\trung\source\repos\PhanTichVaThietKeGiaiThuat\PhanTichVaThietKeGiaiThuat\obj\Debug\PhanTichVaThietKeGiaiThuat.csproj.CoreCompileInputs.cache
+C:\Users\trung\source\repos\PhanTichVaThietKeGiaiThuat\PhanTichVaThietKeGiaiThuat\obj\Debug\PhanTichVaThietKeGiaiThuat.exe
+C:\Users\trung\source\repos\PhanTichVaThietKeGiaiThuat\PhanTichVaThietKeGiaiThuat\obj\Debug\PhanTichVaThietKeGiaiThuat.pdb
