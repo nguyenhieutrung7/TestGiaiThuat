@@ -5,3 +5,10 @@ C:\Users\trung\source\repos\PhanTichVaThietKeGiaiThuat\PhanTichVaThietKeGiaiThua
 C:\Users\trung\source\repos\PhanTichVaThietKeGiaiThuat\PhanTichVaThietKeGiaiThuat\obj\Debug\PhanTichVaThietKeGiaiThuat.csproj.CoreCompileInputs.cache
 C:\Users\trung\source\repos\PhanTichVaThietKeGiaiThuat\PhanTichVaThietKeGiaiThuat\obj\Debug\PhanTichVaThietKeGiaiThuat.exe
 C:\Users\trung\source\repos\PhanTichVaThietKeGiaiThuat\PhanTichVaThietKeGiaiThuat\obj\Debug\PhanTichVaThietKeGiaiThuat.pdb
+E:\C# Project\TestGiaiThuat\PhanTichVaThietKeGiaiThuat\bin\Debug\PhanTichVaThietKeGiaiThuat.exe.config
+E:\C# Project\TestGiaiThuat\PhanTichVaThietKeGiaiThuat\bin\Debug\PhanTichVaThietKeGiaiThuat.exe
+E:\C# Project\TestGiaiThuat\PhanTichVaThietKeGiaiThuat\bin\Debug\PhanTichVaThietKeGiaiThuat.pdb
+E:\C# Project\TestGiaiThuat\PhanTichVaThietKeGiaiThuat\obj\Debug\PhanTichVaThietKeGiaiThuat.csprojAssemblyReference.cache
+E:\C# Project\TestGiaiThuat\PhanTichVaThietKeGiaiThuat\obj\Debug\PhanTichVaThietKeGiaiThuat.csproj.CoreCompileInputs.cache
+E:\C# Project\TestGiaiThuat\PhanTichVaThietKeGiaiThuat\obj\Debug\PhanTichVaThietKeGiaiThuat.exe
+E:\C# Project\TestGiaiThuat\PhanTichVaThietKeGiaiThuat\obj\Debug\PhanTichVaThietKeGiaiThuat.pdb
