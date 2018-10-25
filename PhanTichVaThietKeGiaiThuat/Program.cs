@@ -1,3 +1,4 @@
+using PhanTichVaThietKeGiaiThuat.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,6 +9,25 @@ namespace PhanTichVaThietKeGiaiThuat
 {
     class Program
     {
+        public static void countArray(int[] a, int n)
+        {
+            for (int i = 0; i < n; i++)
+            {
+                Console.Write("a[" + i + "]:" + a[i] + " ");
+            }
+            Console.WriteLine();
+        }
+        public static int[] CreateRamdomArrayInteger(int n)
+        {
+            int[] arrayRandom = new int[n];
+            Random random = new Random();
+            for(int i = 0; i < n; i++)
+            {
+                arrayRandom[i] = random.Next(1, 100);
+            }
+            
+            return arrayRandom;
+        }
         public static float ExP(int x, int n)
         {
             float t = 1;
@@ -19,7 +39,7 @@ namespace PhanTichVaThietKeGiaiThuat
             }
             return t;
         }
-        public static int GiaiThua(int n)
+        public static int Factorial(int n)
         {
             int gt = 1;
             for(int i = 1; i <= n; i++)
@@ -28,22 +48,69 @@ namespace PhanTichVaThietKeGiaiThuat
             }
             return gt;
         }
-        public static int DeQuiGiaiThua(int n)
+        public static int RecursionFactorial(int n)
         {
             if (n == 0)
             {
                 return 1;
             }
-            else return n * DeQuiGiaiThua(n - 1);
+            else return n * RecursionFactorial(n - 1);
+        }
+        public static Point ClosestPair(int[] a,int n)
+        {
+            Point point = new Point();
+            int min = int.MaxValue;
+            for(int i = 0; i < n-1; i++)
+            {
+                for(int j = i+1; j < n; j++)
+                {
+                    int x = a[i] - a[j];
+                    if (Math.Abs(x) < min)
+                    {
+                        min = Math.Abs(x);
+                        point.x1 = i;
+                        point.x2 = j;
+                    }
+                }
+            }
+            return point;
+        }
+        public static int ClosestPairUpdate(int[] a, int n)
+        {
+            Point point = new Point();
+            int min= int.MaxValue;
+            int[] b = new int[n];
+            b = a;
+            Array.Sort(b);
+            for(int i = 0; i < n-1; i++)
+            {
+                int x = a[i] - a[i+1];
+                if (Math.Abs(x) < min)
+                {
+                    min = Math.Abs(x);
+                    point.x1 = i;
+                    point.x2 = i+1;
+                }
+            }
+            return min;
         }
         static void Main(string[] args)
         {
+            Console.OutputEncoding = Encoding.UTF8;
             // The code provided will print ‘Hello World’ to the console.
             // Press Ctrl+F5 (or go to Debug > Start Without Debugging) to run your app.
             float exp = ExP(4,5);
             Console.WriteLine(exp);
-            Console.WriteLine("Giai thua:" + GiaiThua(5));
-            Console.WriteLine("Giai thua de qui:"+DeQuiGiaiThua(1));
+            Console.WriteLine("Giai thua:" + Factorial(5));
+            Console.WriteLine("Giai thua de qui:"+ RecursionFactorial(1));
+            int[] a = CreateRamdomArrayInteger(15);
+            Console.Write("Mảng ngẫu nhiên được tạo: ");
+            countArray(a,a.Count());
+            Point point = new Point();
+            point = ClosestPair(a,a.Count());
+            Console.WriteLine("Vị trí cặp điểm gần nhau nhất: "+point.x1+","+point.x2);
+            int cp = ClosestPairUpdate(a,a.Count());
+            Console.WriteLine("Khoảng cách đó là: " + cp);
             Console.ReadKey();
 
             // Go to http://aka.ms/dotnet-get-started-console to continue learning how to build a console app! 
