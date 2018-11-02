@@ -12,3 +12,10 @@ E:\C# Project\TestGiaiThuat\PhanTichVaThietKeGiaiThuat\obj\Debug\PhanTichVaThiet
 E:\C# Project\TestGiaiThuat\PhanTichVaThietKeGiaiThuat\obj\Debug\PhanTichVaThietKeGiaiThuat.csproj.CoreCompileInputs.cache
 E:\C# Project\TestGiaiThuat\PhanTichVaThietKeGiaiThuat\obj\Debug\PhanTichVaThietKeGiaiThuat.exe
 E:\C# Project\TestGiaiThuat\PhanTichVaThietKeGiaiThuat\obj\Debug\PhanTichVaThietKeGiaiThuat.pdb
+D:\Projects\Phan Tich TKVGT\TestGiaiThuat\PhanTichVaThietKeGiaiThuat\bin\Debug\PhanTichVaThietKeGiaiThuat.exe.config
+D:\Projects\Phan Tich TKVGT\TestGiaiThuat\PhanTichVaThietKeGiaiThuat\bin\Debug\PhanTichVaThietKeGiaiThuat.exe
+D:\Projects\Phan Tich TKVGT\TestGiaiThuat\PhanTichVaThietKeGiaiThuat\bin\Debug\PhanTichVaThietKeGiaiThuat.pdb
+D:\Projects\Phan Tich TKVGT\TestGiaiThuat\PhanTichVaThietKeGiaiThuat\obj\Debug\PhanTichVaThietKeGiaiThuat.csprojAssemblyReference.cache
+D:\Projects\Phan Tich TKVGT\TestGiaiThuat\PhanTichVaThietKeGiaiThuat\obj\Debug\PhanTichVaThietKeGiaiThuat.csproj.CoreCompileInputs.cache
+D:\Projects\Phan Tich TKVGT\TestGiaiThuat\PhanTichVaThietKeGiaiThuat\obj\Debug\PhanTichVaThietKeGiaiThuat.exe
+D:\Projects\Phan Tich TKVGT\TestGiaiThuat\PhanTichVaThietKeGiaiThuat\obj\Debug\PhanTichVaThietKeGiaiThuat.pdb
