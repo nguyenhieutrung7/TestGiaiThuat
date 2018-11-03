@@ -118,6 +118,88 @@ namespace PhanTichVaThietKeGiaiThuat
                 }
             return c;
         }
+        public static int[] C3_2017_2018BienDoi(int[] a, int[] b)
+        {
+            int[] c = new int[a.Count()];
+            int count = 0;
+            Array.Sort(a);
+            Array.Sort(b);
+            int i=0, j = 0;
+            while (i < a.Count() && j < b.Count())
+            {
+                if (a[i] < b[j])
+                {
+                    i++;
+                }
+                else if (b[j] < a[i])
+                {
+                    j++;
+                }
+                else
+                {
+                    c[count] = a[i];
+                    count++;
+                    i++;
+                    j++;
+                }
+            }
+            return c;
+
+        }
+
+        public static int Chapter3_1(int[] a, int l,int r)
+        {
+            if (l >= r)
+            {
+                return l;
+            }
+            else
+            {
+                int m = (l + r) / 2;
+                int positionL = Chapter3_1(a, l, m);
+                int positionR = Chapter3_1(a, m + 1, r);
+                if (a[positionL] > a[positionR])
+                    return positionL;
+                else
+                return positionR;
+            }
+            
+        }
+
+        public static int Chapter3_2(int[] a, int l, int r)
+        {
+            if (l <= r)
+            {
+                return r;
+            }
+            else
+            {
+                int m = (l + r) / 2;
+                int positionL = Chapter3_1(a, l, m);
+                int positionR = Chapter3_1(a, m + 1, r);
+                if (a[positionL] < a[positionR])
+                    return positionL;
+                else
+                    return positionR;
+            }
+
+        }
+        public static int Chapter3_3(int a,int n)
+        {
+            if (n == 1)
+            {
+                return a;
+            }
+            else if (n % 2 == 0)
+            {
+                return Chapter3_3(a, n/2) * Chapter3_3(a, n/2);
+            }
+            else
+                return Chapter3_3(a, n/2) * Chapter3_3(a, n/2) * n;
+
+
+
+        }
         static void Main(string[] args)
         {
             Console.OutputEncoding = Encoding.UTF8;
@@ -135,15 +217,23 @@ namespace PhanTichVaThietKeGiaiThuat
             //Console.WriteLine("Vị trí cặp điểm gần nhau nhất: "+point.x1+","+point.x2);
             //int cp = ClosestPairUpdate(a,a.Count());
             //Console.WriteLine("Khoảng cách đó là: " + cp);
-            int[] b = CreateRamdomArrayInteger(15);
-            Console.Write("Mảng ngẫu nhiên được tạo: ");
-            coutArray(b);
+            //int[] b = CreateRamdomArrayInteger(15);
+            //Console.Write("Mảng ngẫu nhiên được tạo: ");
+            //coutArray(b);
             coutArray2(a);
-            coutArray2(b);
-            Console.WriteLine("Mảng giao: ");
-            int[] c = C3_2017_2018(a, b);
-            coutArray(c);
-            
+            //coutArray2(b);
+            //Console.WriteLine("Mảng giao: ");
+            //int[] c = C3_2017_2018(a, b);
+            //coutArray(c);
+            //Console.WriteLine("Mảng giao bien doi de tri: ");
+            //int[] d = C3_2017_2018BienDoi(a, b);
+            //coutArray(d);
+            Console.WriteLine("-------------Chuong 3-------------");
+            Console.WriteLine("Diem lon nhat phan tu mang A la A[" + Chapter3_1(a, 0, a.Count()-1)+"]");
+            Console.WriteLine("Diem nho nhat phan tu mang A la A[" + Chapter3_2(a, 0, a.Count()-1)+"]");
+            int val1_3_3 = 5;
+            int val2_3_3 = 8;
+            Console.WriteLine("Voi A=" + val1_3_3 + ", N=" + val2_3_3 + " Ket Qua A^N=" + Chapter3_3(val1_3_3, val2_3_3));
             Console.ReadKey();
 
             // Go to http://aka.ms/dotnet-get-started-console to continue learning how to build a console app! 
