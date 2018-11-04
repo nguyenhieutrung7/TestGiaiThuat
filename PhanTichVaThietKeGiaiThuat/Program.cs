@@ -25,15 +25,19 @@ namespace PhanTichVaThietKeGiaiThuat
             }
             Console.WriteLine();
         }
+        public static void coutPoint(PointPair x)
+        {
+            Console.Write("Point :a[" + x.x1 + "]" + "-a[" + x.x2 + "]  ");
+        }
         public static int[] CreateRamdomArrayInteger(int n)
         {
             int[] arrayRandom = new int[n];
             Random random = new Random();
-            for(int i = 0; i < n; i++)
+            for (int i = 0; i < n; i++)
             {
-                arrayRandom[i] = random.Next(1, 100);
+                arrayRandom[i] = random.Next(0, 100);
             }
-            
+
             return arrayRandom;
         }
         public static float ExP(int x, int n)
@@ -42,7 +46,7 @@ namespace PhanTichVaThietKeGiaiThuat
             float temp = 1;
             for (int i = 1; i <= n; i++)
             {
-                temp = temp *x/ i;
+                temp = temp * x / i;
                 t = t + temp;
             }
             return t;
@@ -50,7 +54,7 @@ namespace PhanTichVaThietKeGiaiThuat
         public static int Factorial(int n)
         {
             int gt = 1;
-            for(int i = 1; i <= n; i++)
+            for (int i = 1; i <= n; i++)
             {
                 gt *= i;
             }
@@ -64,50 +68,13 @@ namespace PhanTichVaThietKeGiaiThuat
             }
             else return n * RecursionFactorial(n - 1);
         }
-        public static Point ClosestPair(int[] a,int n)
-        {
-            Point point = new Point();
-            int min = int.MaxValue;
-            for(int i = 0; i < n-1; i++)
-            {
-                for(int j = i+1; j < n; j++)
-                {
-                    int x = a[i] - a[j];
-                    if (Math.Abs(x) < min)
-                    {
-                        min = Math.Abs(x);
-                        point.x1 = i;
-                        point.x2 = j;
-                    }
-                }
-            }
-            return point;
-        }
-        public static int ClosestPairUpdate(int[] a, int n)
-        {
-            Point point = new Point();
-            int min= int.MaxValue;
-            int[] b = new int[n];
-            b = a;
-            Array.Sort(b);
-            for(int i = 0; i < n-1; i++)
-            {
-                int x = a[i] - a[i+1];
-                if (Math.Abs(x) < min)
-                {
-                    min = Math.Abs(x);
-                    point.x1 = i;
-                    point.x2 = i+1;
-                }
-            }
-            return min;
-        }
-        public static int[] C3_2017_2018(int[] a,int[] b)
+
+        public static int[] C3_2017_2018(int[] a, int[] b)
         {
             int[] c = new int[a.Count()];
             int count = 0;
-            for(int i=0;i<a.Count();i++)
-                for(int j = 0; j < b.Count(); j++)
+            for (int i = 0; i < a.Count(); i++)
+                for (int j = 0; j < b.Count(); j++)
                 {
                     if (a[i] == b[j])
                     {
@@ -124,7 +91,7 @@ namespace PhanTichVaThietKeGiaiThuat
             int count = 0;
             Array.Sort(a);
             Array.Sort(b);
-            int i=0, j = 0;
+            int i = 0, j = 0;
             while (i < a.Count() && j < b.Count())
             {
                 if (a[i] < b[j])
@@ -145,9 +112,85 @@ namespace PhanTichVaThietKeGiaiThuat
             }
             return c;
 
+        } 
+        public static int Chapter2_1(int a,int n)
+        {
+            if (n == 0) return 1;
+            int kq = 1;
+            for(int i = 0; i < n; i++)
+            {
+                kq = kq * a;
+            }
+            return kq;
         }
 
-        public static int Chapter3_1(int[] a, int l,int r)
+        public static int Chapter2_2_a(int[] a,int x)
+        {
+            int kq = a[0];
+            for(int i = 1; i < a.Count(); i++)
+            {
+                int countx = 1;
+                for(int j = 1; j <= i; j++)
+                {
+                    countx *= x;
+                }
+                kq += a[i] * countx;
+            }
+            return kq;
+        }
+
+        public static int Chapter2_2_b(int[] a, int x)
+        {
+            int kq = a[0];
+            int countx = 1;
+            for (int i = 1; i < a.Count(); i++)
+            {
+                countx *= x;
+                kq += a[i] * countx;
+            }
+            return kq;
+        }
+
+        public static PointPair Chapter2_4(int[] a, int n)
+        {
+            PointPair point = new PointPair();
+            int min = int.MaxValue;
+            for (int i = 0; i < n - 1; i++)
+            {
+                for (int j = i + 1; j < n; j++)
+                {
+                    int x = a[i] - a[j];
+                    if (Math.Abs(x) < min)
+                    {
+                        min = Math.Abs(x);
+                        point.x1 = i;
+                        point.x2 = j;
+                    }
+                }
+            }
+            return point;
+        }
+        public static int Chapter2_4Update(int[] a, int n)
+        {
+            PointPair point = new PointPair();
+            int min = int.MaxValue;
+            int[] b = new int[n];
+            Array.Copy(a, 0, b, 0, a.Count());
+            Array.Sort(b);
+            for (int i = 0; i < n - 1; i++)
+            {
+                int x = b[i] - b[i + 1];
+                if (Math.Abs(x) < min)
+                {
+                    min = Math.Abs(x);
+                    point.x1 = i;
+                    point.x2 = i + 1;
+                }
+            }
+            return min;
+        }
+
+        public static int Chapter3_1(int[] a, int l, int r)
         {
             if (l >= r)
             {
@@ -161,22 +204,22 @@ namespace PhanTichVaThietKeGiaiThuat
                 if (a[positionL] > a[positionR])
                     return positionL;
                 else
-                return positionR;
+                    return positionR;
             }
-            
+
         }
 
         public static int Chapter3_2(int[] a, int l, int r)
         {
-            if (l <= r)
+            if (l >= r)
             {
-                return r;
+                return l;
             }
             else
             {
                 int m = (l + r) / 2;
-                int positionL = Chapter3_1(a, l, m);
-                int positionR = Chapter3_1(a, m + 1, r);
+                int positionL = Chapter3_2(a, l, m);
+                int positionR = Chapter3_2(a, m + 1, r);
                 if (a[positionL] < a[positionR])
                     return positionL;
                 else
@@ -184,19 +227,46 @@ namespace PhanTichVaThietKeGiaiThuat
             }
 
         }
-        public static int Chapter3_3(int a,int n)
+        public static int Chapter3_3(int a, int n)
         {
             if (n == 1)
             {
                 return a;
             }
+
             else if (n % 2 == 0)
             {
-                return Chapter3_3(a, n/2) * Chapter3_3(a, n/2);
+                return Chapter3_3(a, n / 2) * Chapter3_3(a, n / 2);
             }
             else
-                return Chapter3_3(a, n/2) * Chapter3_3(a, n/2) * n;
+                return Chapter3_3(a, n / 2) * Chapter3_3(a, n / 2) * a;
 
+
+
+        }
+        public static int[] Chapter3_4(int[] a)
+        {
+            int l = 0;
+            int r = a.Count() - 1;
+            int[] b = new int[a.Count()];
+            Array.Copy(a, 0, b, 0, a.Count() - 1);
+            while (l <= r)
+            {
+                while (b[l] < 0 && l < r)
+                {
+                    l++;
+                }
+                while (b[r] >= 0 && r > l)
+                {
+                    r--;
+                }
+                int t = b[l];
+                b[l] = b[r];
+                b[r] = t;
+                r--;
+                l++;
+            }
+            return b;
 
 
         }
@@ -209,7 +279,7 @@ namespace PhanTichVaThietKeGiaiThuat
             //Console.WriteLine(exp);
             //Console.WriteLine("Giai thua:" + Factorial(5));
             //Console.WriteLine("Giai thua de qui:"+ RecursionFactorial(1));
-            int[] a = CreateRamdomArrayInteger(15);
+            int[] a = CreateRamdomArrayInteger(4);
             Console.Write("Mảng ngẫu nhiên được tạo: ");
             coutArray(a);
             //Point point = new Point();
@@ -221,6 +291,9 @@ namespace PhanTichVaThietKeGiaiThuat
             //Console.Write("Mảng ngẫu nhiên được tạo: ");
             //coutArray(b);
             coutArray2(a);
+
+            int interger1 = 4;
+            int interger2 = 9;
             //coutArray2(b);
             //Console.WriteLine("Mảng giao: ");
             //int[] c = C3_2017_2018(a, b);
@@ -228,12 +301,19 @@ namespace PhanTichVaThietKeGiaiThuat
             //Console.WriteLine("Mảng giao bien doi de tri: ");
             //int[] d = C3_2017_2018BienDoi(a, b);
             //coutArray(d);
+            Console.WriteLine("Chapte2/1 Voi A=" + interger1 + ", N=" + interger2 + " Ket Qua "+interger1+"^"+interger2+"=" + Chapter2_1(interger1, interger2));
+            Console.Write("Chapte2/2 Ket qua phuong trinh voi mang a và x="+interger1+": "+Chapter2_2_a(a,interger1) );
+            Console.WriteLine(", Ket qua phuong trinh voi mang a và x=" + interger1 + " Update: " + Chapter2_2_b(a, interger1));
+            Console.WriteLine("Chapte2/4 Khoang cach 2 cap diem ngan nhat Update la: "+Chapter2_4Update(a,a.Count()));
+
             Console.WriteLine("-------------Chuong 3-------------");
-            Console.WriteLine("Diem lon nhat phan tu mang A la A[" + Chapter3_1(a, 0, a.Count()-1)+"]");
-            Console.WriteLine("Diem nho nhat phan tu mang A la A[" + Chapter3_2(a, 0, a.Count()-1)+"]");
-            int val1_3_3 = 5;
-            int val2_3_3 = 8;
-            Console.WriteLine("Voi A=" + val1_3_3 + ", N=" + val2_3_3 + " Ket Qua A^N=" + Chapter3_3(val1_3_3, val2_3_3));
+            Console.WriteLine("Chapter3/1 Diem lon nhat phan tu mang A la A[" + Chapter3_1(a, 0, a.Count() - 1) + "]");
+            Console.WriteLine("Chapter3/2 Diem nho nhat phan tu mang A la A[" + Chapter3_2(a, 0, a.Count() - 1) + "]");
+            Console.WriteLine("Chapter3/3 Voi A=" + interger1 + ", N=" + interger2 + " Ket Qua " + interger1 + "^" + interger2 + "=" + Chapter3_3(interger1, interger2));
+            
+            Console.WriteLine("Chapter3/4 Mang sau sap xep");
+            coutArray(Chapter3_4(a));
+
             Console.ReadKey();
 
             // Go to http://aka.ms/dotnet-get-started-console to continue learning how to build a console app! 

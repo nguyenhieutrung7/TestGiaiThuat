@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PhanTichVaThietKeGiaiThuat.Models
 {
-    public class Point
+    public class PointPair
     {
         public int x1 { get; set; }
         public int x2 { get; set; }
