@@ -270,6 +270,27 @@ namespace PhanTichVaThietKeGiaiThuat
 
 
         }
+        public static int minC3_5(int x1,int x2,int x3)
+        {
+            int min = x1;
+            if (x2 < min && x2 < x3)
+                return x2;
+            else if (x3 < min && x3 < x2)
+                return x3;
+            return min;
+        }
+        public static int Chapter3_5(int[] a,int l,int r)
+        {
+            if (r == l + 1)
+                return Math.Abs(a[l] - a[r]);
+            else
+            {
+                int m = (l + r) / 2;
+                int d1 = Chapter3_5(a, l, m);
+                int d2 = Chapter3_5(a, m + 1, r);
+                return minC3_5(Math.Abs(a[m] - a[m+1]), d1, d2);
+            }
+        }
         static void Main(string[] args)
         {
             Console.OutputEncoding = Encoding.UTF8;
@@ -279,7 +300,7 @@ namespace PhanTichVaThietKeGiaiThuat
             //Console.WriteLine(exp);
             //Console.WriteLine("Giai thua:" + Factorial(5));
             //Console.WriteLine("Giai thua de qui:"+ RecursionFactorial(1));
-            int[] a = CreateRamdomArrayInteger(4);
+            int[] a = CreateRamdomArrayInteger(3);
             Console.Write("Mảng ngẫu nhiên được tạo: ");
             coutArray(a);
             //Point point = new Point();
@@ -292,7 +313,7 @@ namespace PhanTichVaThietKeGiaiThuat
             //coutArray(b);
             coutArray2(a);
 
-            int interger1 = 4;
+            int interger1 = -4;
             int interger2 = 9;
             //coutArray2(b);
             //Console.WriteLine("Mảng giao: ");
@@ -304,7 +325,8 @@ namespace PhanTichVaThietKeGiaiThuat
             Console.WriteLine("Chapte2/1 Voi A=" + interger1 + ", N=" + interger2 + " Ket Qua "+interger1+"^"+interger2+"=" + Chapter2_1(interger1, interger2));
             Console.Write("Chapte2/2 Ket qua phuong trinh voi mang a và x="+interger1+": "+Chapter2_2_a(a,interger1) );
             Console.WriteLine(", Ket qua phuong trinh voi mang a và x=" + interger1 + " Update: " + Chapter2_2_b(a, interger1));
-            Console.WriteLine("Chapte2/4 Khoang cach 2 cap diem ngan nhat Update la: "+Chapter2_4Update(a,a.Count()));
+            Console.WriteLine("Chapte2/4 2 cap diem ngan nhat  la: " ); coutPoint(Chapter2_4(a, a.Count()));
+            Console.WriteLine("Chapte2/4_Update Khoang cach 2 cap diem ngan nhat la: "+Chapter2_4Update(a,a.Count()));
 
             Console.WriteLine("-------------Chuong 3-------------");
             Console.WriteLine("Chapter3/1 Diem lon nhat phan tu mang A la A[" + Chapter3_1(a, 0, a.Count() - 1) + "]");
@@ -312,7 +334,10 @@ namespace PhanTichVaThietKeGiaiThuat
             Console.WriteLine("Chapter3/3 Voi A=" + interger1 + ", N=" + interger2 + " Ket Qua " + interger1 + "^" + interger2 + "=" + Chapter3_3(interger1, interger2));
             
             Console.WriteLine("Chapter3/4 Mang sau sap xep");
+            
             coutArray(Chapter3_4(a));
+
+            Console.WriteLine("Chapte3/5 Khoang cach 2 cap diem ngan nhat Chia de tri la: " + Chapter3_5(a, 0, a.Count() - 1));
 
             Console.ReadKey();
 
