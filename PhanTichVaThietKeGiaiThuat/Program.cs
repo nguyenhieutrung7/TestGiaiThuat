@@ -291,53 +291,63 @@ namespace PhanTichVaThietKeGiaiThuat
                 return minC3_5(Math.Abs(a[m] - a[m+1]), d1, d2);
             }
         }
+        public static int FibonacciDeQui(int n)
+        {
+            if (n == 0 || n == 1)
+            {
+                return 1;
+            }
+            else
+                return FibonacciDeQui(n - 1) + FibonacciDeQui(n - 2);
+        }
         static void Main(string[] args)
         {
-            Console.OutputEncoding = Encoding.UTF8;
-            // The code provided will print ‘Hello World’ to the console.
-            // Press Ctrl+F5 (or go to Debug > Start Without Debugging) to run your app.
-            //float exp = ExP(4,5);
-            //Console.WriteLine(exp);
-            //Console.WriteLine("Giai thua:" + Factorial(5));
-            //Console.WriteLine("Giai thua de qui:"+ RecursionFactorial(1));
-            int[] a = CreateRamdomArrayInteger(3);
-            Console.Write("Mảng ngẫu nhiên được tạo: ");
-            coutArray(a);
-            //Point point = new Point();
-            //point = ClosestPair(a,a.Count());
-            //Console.WriteLine("Vị trí cặp điểm gần nhau nhất: "+point.x1+","+point.x2);
-            //int cp = ClosestPairUpdate(a,a.Count());
-            //Console.WriteLine("Khoảng cách đó là: " + cp);
-            //int[] b = CreateRamdomArrayInteger(15);
+            //Console.OutputEncoding = Encoding.UTF8;
+            //// The code provided will print ‘Hello World’ to the console.
+            //// Press Ctrl+F5 (or go to Debug > Start Without Debugging) to run your app.
+            ////float exp = ExP(4,5);
+            ////Console.WriteLine(exp);
+            ////Console.WriteLine("Giai thua:" + Factorial(5));
+            ////Console.WriteLine("Giai thua de qui:"+ RecursionFactorial(1));
+            //int[] a = CreateRamdomArrayInteger(3);
             //Console.Write("Mảng ngẫu nhiên được tạo: ");
-            //coutArray(b);
-            coutArray2(a);
+            //coutArray(a);
+            ////Point point = new Point();
+            ////point = ClosestPair(a,a.Count());
+            ////Console.WriteLine("Vị trí cặp điểm gần nhau nhất: "+point.x1+","+point.x2);
+            ////int cp = ClosestPairUpdate(a,a.Count());
+            ////Console.WriteLine("Khoảng cách đó là: " + cp);
+            ////int[] b = CreateRamdomArrayInteger(15);
+            ////Console.Write("Mảng ngẫu nhiên được tạo: ");
+            ////coutArray(b);
+            //coutArray2(a);
 
-            int interger1 = -4;
-            int interger2 = 9;
-            //coutArray2(b);
-            //Console.WriteLine("Mảng giao: ");
-            //int[] c = C3_2017_2018(a, b);
-            //coutArray(c);
-            //Console.WriteLine("Mảng giao bien doi de tri: ");
-            //int[] d = C3_2017_2018BienDoi(a, b);
-            //coutArray(d);
-            Console.WriteLine("Chapte2/1 Voi A=" + interger1 + ", N=" + interger2 + " Ket Qua "+interger1+"^"+interger2+"=" + Chapter2_1(interger1, interger2));
-            Console.Write("Chapte2/2 Ket qua phuong trinh voi mang a và x="+interger1+": "+Chapter2_2_a(a,interger1) );
-            Console.WriteLine(", Ket qua phuong trinh voi mang a và x=" + interger1 + " Update: " + Chapter2_2_b(a, interger1));
-            Console.WriteLine("Chapte2/4 2 cap diem ngan nhat  la: " ); coutPoint(Chapter2_4(a, a.Count()));
-            Console.WriteLine("Chapte2/4_Update Khoang cach 2 cap diem ngan nhat la: "+Chapter2_4Update(a,a.Count()));
+            //int interger1 = -4;
+            //int interger2 = 9;
+            ////coutArray2(b);
+            ////Console.WriteLine("Mảng giao: ");
+            ////int[] c = C3_2017_2018(a, b);
+            ////coutArray(c);
+            ////Console.WriteLine("Mảng giao bien doi de tri: ");
+            ////int[] d = C3_2017_2018BienDoi(a, b);
+            ////coutArray(d);
+            //Console.WriteLine("Chapte2/1 Voi A=" + interger1 + ", N=" + interger2 + " Ket Qua "+interger1+"^"+interger2+"=" + Chapter2_1(interger1, interger2));
+            //Console.Write("Chapte2/2 Ket qua phuong trinh voi mang a và x="+interger1+": "+Chapter2_2_a(a,interger1) );
+            //Console.WriteLine(", Ket qua phuong trinh voi mang a và x=" + interger1 + " Update: " + Chapter2_2_b(a, interger1));
+            //Console.WriteLine("Chapte2/4 2 cap diem ngan nhat  la: " ); coutPoint(Chapter2_4(a, a.Count()));
+            //Console.WriteLine("Chapte2/4_Update Khoang cach 2 cap diem ngan nhat la: "+Chapter2_4Update(a,a.Count()));
 
-            Console.WriteLine("-------------Chuong 3-------------");
-            Console.WriteLine("Chapter3/1 Diem lon nhat phan tu mang A la A[" + Chapter3_1(a, 0, a.Count() - 1) + "]");
-            Console.WriteLine("Chapter3/2 Diem nho nhat phan tu mang A la A[" + Chapter3_2(a, 0, a.Count() - 1) + "]");
-            Console.WriteLine("Chapter3/3 Voi A=" + interger1 + ", N=" + interger2 + " Ket Qua " + interger1 + "^" + interger2 + "=" + Chapter3_3(interger1, interger2));
-            
-            Console.WriteLine("Chapter3/4 Mang sau sap xep");
-            
-            coutArray(Chapter3_4(a));
+            //Console.WriteLine("-------------Chuong 3-------------");
+            //Console.WriteLine("Chapter3/1 Diem lon nhat phan tu mang A la A[" + Chapter3_1(a, 0, a.Count() - 1) + "]");
+            //Console.WriteLine("Chapter3/2 Diem nho nhat phan tu mang A la A[" + Chapter3_2(a, 0, a.Count() - 1) + "]");
+            //Console.WriteLine("Chapter3/3 Voi A=" + interger1 + ", N=" + interger2 + " Ket Qua " + interger1 + "^" + interger2 + "=" + Chapter3_3(interger1, interger2));
 
-            Console.WriteLine("Chapte3/5 Khoang cach 2 cap diem ngan nhat Chia de tri la: " + Chapter3_5(a, 0, a.Count() - 1));
+            //Console.WriteLine("Chapter3/4 Mang sau sap xep");
+
+            //coutArray(Chapter3_4(a));
+
+            //Console.WriteLine("Chapte3/5 Khoang cach 2 cap diem ngan nhat Chia de tri la: " + Chapter3_5(a, 0, a.Count() - 1));
+            Console.WriteLine(FibonacciDeQui(5));
 
             Console.ReadKey();
 

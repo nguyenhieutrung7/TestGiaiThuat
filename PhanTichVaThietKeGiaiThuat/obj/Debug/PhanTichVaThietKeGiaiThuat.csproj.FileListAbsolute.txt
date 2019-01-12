@@ -19,3 +19,10 @@ D:\Projects\Phan Tich TKVGT\TestGiaiThuat\PhanTichVaThietKeGiaiThuat\obj\Debug\P
 D:\Projects\Phan Tich TKVGT\TestGiaiThuat\PhanTichVaThietKeGiaiThuat\obj\Debug\PhanTichVaThietKeGiaiThuat.csproj.CoreCompileInputs.cache
 D:\Projects\Phan Tich TKVGT\TestGiaiThuat\PhanTichVaThietKeGiaiThuat\obj\Debug\PhanTichVaThietKeGiaiThuat.exe
 D:\Projects\Phan Tich TKVGT\TestGiaiThuat\PhanTichVaThietKeGiaiThuat\obj\Debug\PhanTichVaThietKeGiaiThuat.pdb
+E:\ASP.NET MVC PROJECT\TestGiaiThuat\PhanTichVaThietKeGiaiThuat\bin\Debug\PhanTichVaThietKeGiaiThuat.exe.config
+E:\ASP.NET MVC PROJECT\TestGiaiThuat\PhanTichVaThietKeGiaiThuat\bin\Debug\PhanTichVaThietKeGiaiThuat.exe
+E:\ASP.NET MVC PROJECT\TestGiaiThuat\PhanTichVaThietKeGiaiThuat\bin\Debug\PhanTichVaThietKeGiaiThuat.pdb
+E:\ASP.NET MVC PROJECT\TestGiaiThuat\PhanTichVaThietKeGiaiThuat\obj\Debug\PhanTichVaThietKeGiaiThuat.csprojAssemblyReference.cache
+E:\ASP.NET MVC PROJECT\TestGiaiThuat\PhanTichVaThietKeGiaiThuat\obj\Debug\PhanTichVaThietKeGiaiThuat.csproj.CoreCompileInputs.cache
+E:\ASP.NET MVC PROJECT\TestGiaiThuat\PhanTichVaThietKeGiaiThuat\obj\Debug\PhanTichVaThietKeGiaiThuat.exe
+E:\ASP.NET MVC PROJECT\TestGiaiThuat\PhanTichVaThietKeGiaiThuat\obj\Debug\PhanTichVaThietKeGiaiThuat.pdb
